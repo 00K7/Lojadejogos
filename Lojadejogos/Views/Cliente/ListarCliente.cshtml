@@ -1,0 +1,59 @@
+﻿@model Lojadejogos.Models.Cliente
+
+@{
+    ViewBag.Title = "ListarCliente";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteCPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteDataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteCelular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteEndereco)
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ClienteCPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ClienteNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ClienteDataNascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ClienteEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ClienteCelular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.ClienteEndereco)
+        </td>
+        
+    </tr>
+}
+
+</table>

@@ -1,0 +1,70 @@
+﻿@model Lojadejogos.Models.Jogo
+
+@{
+    ViewBag.Title = "Listar Jogo";
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JogoNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JogoVersao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JogoDev)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JogoGenero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JogoFaixa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JogoPlataforma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JogoData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JogoSinopse)
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.JogoNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.JogoVersao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.JogoDev)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.JogoGenero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.JogoFaixa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.JogoPlataforma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.JogoData)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.JogoSinopse)
+        </td>
+        
+    </tr>
+
+
+</table>

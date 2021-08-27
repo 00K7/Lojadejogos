@@ -1,0 +1,77 @@
+﻿@model Lojadejogos.Models.Funcionario
+
+@{
+    ViewBag.Title = "Listar Funcionario";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FuncionarioID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuncionarioCPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuncionarioRG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuncionarioNome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuncionarioCargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuncionarioDataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuncionarioEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuncionarioCelular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuncionarioEndereco)
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuncionarioID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuncionarioCPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuncionarioRG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuncionarioNome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuncionarioCargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuncionarioDataNascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuncionarioEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuncionarioCelular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.FuncionarioEndereco)
+        </td>
+
+    </tr>
+
+
+</table>
