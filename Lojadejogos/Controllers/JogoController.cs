@@ -7,23 +7,23 @@ using System.Web.Mvc;
 
 namespace Lojadejogos.Controllers
 {
+
     public class JogoController : Controller
     {
-        // GET: Jogo
-        public ActionResult Index()
+        
+        
+    // GET: Jogo
+    public ActionResult Index()
         {
             var jogo = new Jogo();
             return View();
         }
-
+        Acoes ac = new Acoes();
         [HttpPost]
         public ActionResult Index(Jogo jogo)
         {
-            if(ModelState.IsValid)
-            {
-                return View("ListarJogo", jogo);
-            }
-            return View();
+            ac.CadastrarFuncionario(jogo);
+            return View(jogo);
         }
         
     }

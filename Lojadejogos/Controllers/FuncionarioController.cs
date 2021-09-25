@@ -9,21 +9,19 @@ namespace Lojadejogos.Controllers
 {
     public class FuncionarioController : Controller
     {
+        
         // GET: Funcionario
         public ActionResult Index()
         {
             var funcionario = new Funcionario();
             return View();
         }
-
+        Acoes ac = new Acoes();
         [HttpPost]
         public ActionResult Index(Funcionario funcionario)
         {
-            if (ModelState.IsValid)
-            {
-                return View("ListarFuncionario", funcionario);
-            }
-            return View();
+            ac.CadastrarFuncionario(funcionario);
+            return View(funcionario);
         }
 
         

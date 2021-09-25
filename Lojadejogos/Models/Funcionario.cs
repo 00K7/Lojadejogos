@@ -56,5 +56,7 @@ namespace Lojadejogos.Models
         [DataType(DataType.PostalCode)]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Digite entre 3 e 100 caracteres.")]
         public string FuncionarioEndereco { get; set; }
+
+
     }
 }

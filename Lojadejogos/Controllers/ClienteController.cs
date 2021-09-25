@@ -9,21 +9,20 @@ namespace Lojadejogos.Controllers
 {
     public class ClienteController : Controller
     {
+       
+        };
         // GET: Cliente
         public ActionResult Index()
         {
             var cliente = new Cliente();
             return View();
         }
-
+        Acoes ac = new Acoes();
         [HttpPost]
         public ActionResult Index(Cliente cliente)
         {
-            if (ModelState.IsValid)
-            {
-                return View("ListarCliente", cliente);
-            }
-            return View();
+            ac.CadastrarFuncionario(cliente);
+            return View(cliente);
         }
 
 

@@ -1,15 +1,19 @@
-﻿@model Lojadejogos.Models.Jogo
+﻿@model IEnumerable<Lojadejogos.Models.Jogo>
 
 @{
-    ViewBag.Title = "Listar Jogo";
+    ViewBag.Title = "ListarJogo";
 }
 
+<h2>ListarJogo</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JogoID)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.JogoNome)
         </th>
@@ -37,34 +41,41 @@
         <th></th>
     </tr>
 
-
+@foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => Model.JogoNome)
+            @Html.DisplayFor(modelItem => item.JogoID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.JogoVersao)
+            @Html.DisplayFor(modelItem => item.JogoNome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.JogoDev)
+            @Html.DisplayFor(modelItem => item.JogoVersao)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.JogoGenero)
+            @Html.DisplayFor(modelItem => item.JogoDev)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.JogoFaixa)
+            @Html.DisplayFor(modelItem => item.JogoGenero)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.JogoPlataforma)
+            @Html.DisplayFor(modelItem => item.JogoFaixa)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.JogoData)
+            @Html.DisplayFor(modelItem => item.JogoPlataforma)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.JogoSinopse)
+            @Html.DisplayFor(modelItem => item.JogoData)
         </td>
-        
+        <td>
+            @Html.DisplayFor(modelItem => item.JogoSinopse)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.JogoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.JogoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.JogoID })
+        </td>
     </tr>
-
+}
 
 </table>

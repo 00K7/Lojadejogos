@@ -11,7 +11,7 @@ namespace Lojadejogos.Models
         [Key]
         [Required(ErrorMessage = "Digite o Código")]
         [Display(Name = "Código")]
-        public int JogoID { get; set; }
+        public string JogoID { get; set; }
 
         [Required(ErrorMessage = "Digite o nome do jogo")]
         [Display(Name = "Nome")]

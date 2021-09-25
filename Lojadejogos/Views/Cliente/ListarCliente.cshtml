@@ -1,10 +1,10 @@
-﻿@model Lojadejogos.Models.Cliente
+﻿@model IEnumerable<Lojadejogos.Models.Cliente>
 
 @{
     ViewBag.Title = "ListarCliente";
 }
 
-
+<h2>ListarCliente</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -32,27 +32,31 @@
         <th></th>
     </tr>
 
-
+@foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => Model.ClienteCPF)
+            @Html.DisplayFor(modelItem => item.ClienteCPF)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.ClienteNome)
+            @Html.DisplayFor(modelItem => item.ClienteNome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.ClienteDataNascimento)
+            @Html.DisplayFor(modelItem => item.ClienteDataNascimento)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.ClienteEmail)
+            @Html.DisplayFor(modelItem => item.ClienteEmail)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.ClienteCelular)
+            @Html.DisplayFor(modelItem => item.ClienteCelular)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => Model.ClienteEndereco)
+            @Html.DisplayFor(modelItem => item.ClienteEndereco)
         </td>
-        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClienteCPF }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ClienteCPF }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClienteCPF })
+        </td>
     </tr>
 }
 
