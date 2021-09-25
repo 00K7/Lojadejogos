@@ -9,7 +9,8 @@ namespace Lojadejogos.Controllers
 {
     public class ClienteController : Controller
     {
-       
+        private static List<Cliente> listaCliente = new List<Cliente>() {
+            new Cliente{ ClienteCPF="1894017348", ClienteNome="Oxe", ClienteDataNascimento= new DateTime(2000, 06, 15), ClienteEmail="xswzaq@gmail.com", ClienteCelular="23083-6173", ClienteEndereco="Rua Sebastião de Paiva, 83"}
         };
         // GET: Cliente
         public ActionResult Index()
@@ -21,8 +22,8 @@ namespace Lojadejogos.Controllers
         [HttpPost]
         public ActionResult Index(Cliente cliente)
         {
-            ac.CadastrarFuncionario(cliente);
-            return View(cliente);
+            listaCliente.Add(cliente);
+            return View("ListarCliente", listaCliente);
         }
 
 
